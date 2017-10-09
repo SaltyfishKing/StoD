@@ -296,7 +296,6 @@ int main()
     cout << "=======结果输出完毕=======" << endl;
     cout << "=======程序运行完成=======" << endl;
 
-    int _s;
-    cin >> _s;
+    system("pause");
     return 0;
 }
