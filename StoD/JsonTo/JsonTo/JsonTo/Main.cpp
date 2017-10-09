@@ -230,6 +230,7 @@ int main()
     cout << "=======结果写入Json=======" << endl;
     //写Json
     Json::Value root;//根节点
+    int u_stu_num = 0;
 
     Json::Value unlucky_student;//倒霉孩子节点233
     Json::Value admitted;//部门纳新情况节点
@@ -245,6 +246,7 @@ int main()
     {
         if (assign[i] == 0)
         {
+            u_stu_num++;
             root["unlucky_student"].append(Stu[i].get_stu_no());
         }
     }
@@ -279,7 +281,22 @@ int main()
     os << sw.write(root);
     os.close();
 
+    cout << "=======纳新结果输出=======" << endl;
+    int dep_stu_num = 0;//目标纳新人数
+    for (int i = 0; i < dep_num; i++)
+    {
+        dep_stu_num += Dep[i].get_mem_lmt();
+    }
+    int acc_stu_num = 300 - u_stu_num;//实际纳新人数
+
+    cout << "-------目标纳新人数-------" << endl;
+    cout << "-----------" << dep_stu_num  << "------------" << endl;
+    cout << "-------实际纳新人数-------" << endl;
+    cout << "-----------" << acc_stu_num << "------------" << endl;
+    cout << "=======结果输出完毕=======" << endl;
     cout << "=======程序运行完成=======" << endl;
 
+    int _s;
+    cin >> _s;
     return 0;
 }

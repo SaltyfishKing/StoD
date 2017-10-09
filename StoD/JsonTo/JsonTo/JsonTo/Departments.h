@@ -14,7 +14,11 @@ private:
 public:
     struct acc_stu
     {
-        acc_stu() { s_no = 0; s_sum = 0; }
+        acc_stu() 
+        { 
+            s_no = 0; 
+            s_sum = 0; 
+        }
         int s_no;
         int s_sum;
     };//纳新成员结构体

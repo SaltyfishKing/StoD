@@ -80,9 +80,9 @@ int main()
 
     //输出到文件
     ofstream os;
-    os.open("intput_data.json", ios::trunc);
+    os.open("./intput_data.txt", ios::trunc);
     os << sw.write(root);
     os.close();
-    cout << "生成input_data.json成功！" << endl;
+    cout << "生成input_data.txt成功！" << endl;
     return 0;
 }

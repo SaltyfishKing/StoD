@@ -14,7 +14,7 @@ int readJson(Students Stu[], Departments Dep[])
 
     //从文件中读取
     ifstream ifs;
-    ifs.open("intput_data.txt");
+    ifs.open("./intput_data.txt");
 
     if (reader.parse(ifs, root))
     {   
